@@ -11,7 +11,8 @@ namespace NearestedDate
             {
                 new () { Id = 1, Date = DateTime.Parse("01.01.2020") },
                 new () { Id = 2, Date = DateTime.Parse("01.01.2021") },
-                new () { Id = 3, Date = DateTime.Parse("01.01.2022") }
+                new () { Id = 3, Date = DateTime.Parse("01.01.2022") },
+                new () { Id = 3, Date = DateTime.Parse("01.01.2023") }
             };
         }
 
@@ -19,9 +20,9 @@ namespace NearestedDate
         {
             return new List<InputData>
             {
-                new () { Id = 1, Date = DateTime.Parse("02.01.2022") },
-                new () { Id = 2, Date = DateTime.Parse("02.01.2021") },
-                new () { Id = 3, Date = DateTime.Parse("03.01.2020") }
+                new () { Id = 1, Date = DateTime.Parse("01.02.2022") },
+                new () { Id = 2, Date = DateTime.Parse("01.02.2021") },
+                new () { Id = 3, Date = DateTime.Parse("12.30.2020") }
             };
         }
     }
