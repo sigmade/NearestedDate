@@ -22,7 +22,7 @@ namespace NearestedDate
                              Id = input.Id,
                              Date = input.Date,
                              ClassifierDate = clsDate // Проходимся по заранее выгруженному справочнику
-                                                      // остикаем что меньше  
+                                                      // отсекаем что меньше  
                                 .Where(d => d.Date <= input.Date) 
                                 .First() // забираем первый он и будет ближайший
                          };
