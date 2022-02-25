@@ -10,7 +10,7 @@ namespace NearestedDate
             var init = new Initializer();
 
             //выгружаем отсортировааные даты в лист,
-            //чтобы только один раз в бд обратится
+            //чтобы только один раз в бд обратиться
             var clsDate = init.Classifiers()
                 .OrderByDescending(x => x.Date)
                 .Select(x => x.Date)
@@ -21,9 +21,10 @@ namespace NearestedDate
                          {
                              Id = input.Id,
                              Date = input.Date,
-                             ClassifierDate = clsDate
-                                .Where(d => d.Date <= input.Date)
-                                .First()
+                             ClassifierDate = clsDate // Проходимся по заранее выгруженному справочнику
+                                                      // остикаем что меньше  
+                                .Where(d => d.Date <= input.Date) 
+                                .First() // забираем первый он и будет ближайший
                          };
 
             foreach (var i in outPut)
